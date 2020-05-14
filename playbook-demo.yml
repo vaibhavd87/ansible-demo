@@ -1,0 +1,19 @@
+---
+  - name: "Playing with Ansible and Git"
+    hosts: localhost
+    tasks:
+    
+    - name: Ansible apt install packages example
+      apt:
+        name: 
+          - php7.2
+          - php7.2-mysql
+          - zip
+          - unzip
+          - docker-compose
+          - tree
+          - ctop
+        state: present 
+        update_cache: true
+      become: true
+
